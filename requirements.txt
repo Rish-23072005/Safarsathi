@@ -1,7 +1,9 @@
 streamlit==1.32.0
-langchain==0.3.14
-langchain-core==0.3.29
-langchain-groq==0.2.3
-langchain-community==0.3.14
+langchain==0.1.0
+langchain-core==0.1.10
+langchain-groq==0.0.1
+langchain-community==0.0.13
 python-dotenv==1.0.1
-typing-extensions>=4.7.0 
+typing-extensions>=4.7.0
+pydantic==2.5.2
+groq==0.4.1 
