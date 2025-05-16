@@ -70,11 +70,15 @@ if 'state' not in st.session_state:
 
 @st.cache_resource
 def get_llm():
-    return ChatGroq(
-        temperature=0,
-        groq_api_key=os.getenv("GROQ_API_KEY"),
-        model_name="llama2-70b-4096"
-    )
+    try:
+        return ChatGroq(
+            temperature=0,
+            groq_api_key=os.getenv("GROQ_API_KEY"),
+            model_name="mixtral-8x7b-32768"
+        )
+    except Exception as e:
+        st.error(f"Error initializing ChatGroq: {str(e)}")
+        return None
 
 # Define the itinerary prompt
 itinerary_prompt = ChatPromptTemplate.from_messages([
@@ -85,6 +89,9 @@ itinerary_prompt = ChatPromptTemplate.from_messages([
 def create_itinerary(state: PlannerState) -> str:
     try:
         llm = get_llm()
+        if llm is None:
+            return "Failed to initialize the language model. Please check your API key and try again."
+            
         response = llm.invoke(itinerary_prompt.format_messages(
             city=state["city"],
             interests=", ".join(state["interests"]),
