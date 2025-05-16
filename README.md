@@ -1,3 +1,5 @@
+Deployed Link : **https://safarsathi-3f9ghvrebapp2ijthmfaxe2.streamlit.app/**
+
 # SafarSathi - AI Travel Planner
 
 SafarSathi is an AI-powered travel planning application that helps users create personalized travel itineraries. Using advanced language models, it provides detailed day-by-day plans, accommodation recommendations, food suggestions, and local tips.
