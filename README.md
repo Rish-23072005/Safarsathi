@@ -50,7 +50,6 @@ streamlit run app.py
 
 The application can be deployed on:
 - Streamlit Cloud
-- Heroku
 - AWS
 - Google Cloud Platform
 
