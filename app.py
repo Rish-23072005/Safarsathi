@@ -7,7 +7,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 
-# Load environment variables
+# Load environment 
 load_dotenv()
 
 # Configure Streamlit page
