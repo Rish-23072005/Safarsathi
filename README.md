@@ -60,7 +60,7 @@ The application can be deployed on:
 - Streamlit
 - LangChain
 - Groq API
-- TypeScript
+
 
 ## Contributing
 
